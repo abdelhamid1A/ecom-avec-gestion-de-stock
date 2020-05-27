@@ -1,0 +1,54 @@
+.divstandard
+{
+    margin: 100px 0% 0% 20%;
+    width: 60%;
+}
+.cardProduit
+{
+    margin-bottom: 50px;
+}
+
+
+.open_nav {
+  margin-top: -10%;
+    cursor: pointer;
+    font-size: 26px;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(20, 190, 63);
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 60px;
+    -webkit-box-shadow: 8px 0px 8px -1px rgba(0, 0, 0, 0.16);
+            box-shadow: 8px 0px 8px -1px rgba(0, 0, 0, 0.16);
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
