@@ -12,20 +12,20 @@
                   
     if ($result->num_rows > 0) {
         echo '<div class="row">';
-        while($row = mysqli_fetch_array($result))  
-                {  
-                    echo '<div class="col-sm-4 cardProduit">
+        while($row = mysqli_fetch_array($result)) :?> 
+                  
+                    <div class="col-sm-4 cardProduit">
                     <div class="card">
-                    <img src="data:image/jpeg;base64,'.base64_encode($row['IMAGE'] ).'" class="card-img-top" height="200" />  
+                    <img src="../../images/<?php echo $row['IMAGE'] ?>.jpg" class="card-img-top" height="200" />  
                     <div class="card-body">
-                        <h5 class="card-title">'.$row['NOM'].'</h5>    
-                        <a href="updateDeleteProduit.php?id='.$row["ID_PRD"].'"><button type="button" name="detailProduit" class="btn btn-light btn-lg">Détails</button></a>
-                        <p class="card-text text-right">'.$row['Prix'].' Dh</p>
+                        <h5 class="card-title"><?php echo $row['NOM']?></h5>    
+                        <a href="updateDeleteProduit.php?id=<?php echo$row['ID_PRD']?>"><button type="button" name="detailProduit" class="btn btn-light btn-lg">Détails</button></a>
+                        <p class="card-text text-right"><?php echo $row['Prix']?> Dh</p>
                     </div>
                     </div>
-                    </div>';  
-                }
-        echo '</div>';
+                    </div> 
+        <?php endwhile;
+        // echo '</div>';
        
     } 
     else {
